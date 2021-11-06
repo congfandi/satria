@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.thengoding.satria.satria">
+    package="com.thengoding.satria">
    <application
-        android:label="satria"
+        android:label="S-A-T-R-I-A"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

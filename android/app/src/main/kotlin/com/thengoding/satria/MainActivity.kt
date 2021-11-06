@@ -1,4 +1,4 @@
-package com.thengoding.satria.satria
+package com.thengoding.satria
 
 import io.flutter.embedding.android.FlutterActivity
 
