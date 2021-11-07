@@ -11,7 +11,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:satria/views/auth_view.dart';
-import 'package:satria/views/home/home_view.dart';
 
 class SplashScreenView extends StatefulWidget {
   const SplashScreenView({Key? key}) : super(key: key);
