@@ -14,3 +14,6 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ec7b4ba7-623d-470b-8576-5c046c62ce76/deploy-status)](https://app.netlify.com/sites/s-a-t-r-i-a/deploys)
