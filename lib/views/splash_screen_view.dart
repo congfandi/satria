@@ -10,6 +10,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:satria/views/auth_view.dart';
 import 'package:satria/views/home/home_view.dart';
 
 class SplashScreenView extends StatefulWidget {
@@ -25,7 +26,7 @@ class _SplashScreenViewState extends State<SplashScreenView> {
     super.initState();
     WidgetsBinding.instance!.addPostFrameCallback((timeStamp) {
       Future.delayed(const Duration(seconds: 3), () {
-        Get.offAll(const HomeView());
+        Get.offAll(const AuthView());
       });
     });
   }
