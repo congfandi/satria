@@ -8,6 +8,7 @@
  *
  */
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class HomeView extends StatefulWidget {
@@ -18,8 +19,27 @@ class HomeView extends StatefulWidget {
 }
 
 class _HomeViewState extends State<HomeView> {
+  String _user = "";
+
+  getUser() async {
+    var user = FirebaseAuth.instance.currentUser;
+    setState(() {
+      _user = user?.displayName ?? "";
+    });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    getUser();
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      body: Center(
+        child: Text("Halo ${_user}"),
+      ),
+    );
   }
 }

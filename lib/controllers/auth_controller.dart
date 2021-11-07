@@ -44,7 +44,8 @@ class AuthController extends GetxController {
         accessToken: googleSignInAuthentication.accessToken,
         idToken: googleSignInAuthentication.idToken,
       );
-      await _auth.signInWithCredential(credential);
+      UserCredential user = await _auth.signInWithCredential(credential);
+      print("user ${user.user?.displayName}");
     }
   }
 

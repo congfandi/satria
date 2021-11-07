@@ -8,9 +8,11 @@
  *
  */
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:satria/views/auth_view.dart';
+import 'package:satria/views/home/home_view.dart';
 
 class SplashScreenView extends StatefulWidget {
   const SplashScreenView({Key? key}) : super(key: key);
@@ -24,8 +26,13 @@ class _SplashScreenViewState extends State<SplashScreenView> {
   void initState() {
     super.initState();
     WidgetsBinding.instance!.addPostFrameCallback((timeStamp) {
-      Future.delayed(const Duration(seconds: 3), () {
-        Get.offAll(const AuthView());
+      Future.delayed(const Duration(seconds: 3), ()async{
+        if(FirebaseAuth.instance.currentUser != null){
+          Get.offAll(const HomeView());
+        }else{
+          Get.offAll(const AuthView());
+        }
+
       });
     });
   }
