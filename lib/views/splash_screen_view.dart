@@ -9,6 +9,8 @@
  */
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:satria/views/home/home_view.dart';
 
 class SplashScreenView extends StatefulWidget {
   const SplashScreenView({Key? key}) : super(key: key);
@@ -19,7 +21,21 @@ class SplashScreenView extends StatefulWidget {
 
 class _SplashScreenViewState extends State<SplashScreenView> {
   @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance!.addPostFrameCallback((timeStamp) {
+      Future.delayed(const Duration(seconds: 3), () {
+        Get.offAll(const HomeView());
+      });
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return Container();
+    return const Scaffold(
+      body: Center(
+        child: Text("Satria"),
+      ),
+    );
   }
 }
