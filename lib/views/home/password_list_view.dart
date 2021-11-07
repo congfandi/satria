@@ -20,6 +20,10 @@ class PasswordListView extends StatefulWidget {
 class _PasswordListViewState extends State<PasswordListView> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      body: Center(
+        child: Text("Password List"),
+      ),
+    );
   }
 }

@@ -9,6 +9,7 @@
  */
 
 import 'package:flutter/material.dart';
+import 'package:satria/views/auth_view.dart';
 import 'package:get/get.dart';
 import 'package:satria/views/splash_screen_view.dart';
 
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const SplashScreenView(),
+      home: const AuthView(),
     );
   }
 }
