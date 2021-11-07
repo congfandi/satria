@@ -9,17 +9,14 @@
 #
 #
 
-# Get flutter
+FLUTTER_BRANCH=`grep channel: .metadata | sed 's/  channel: //g'`
+FLUTTER_REVISION=`grep revision: .metadata | sed 's/  revision: //g'`
+
 git clone https://github.com/flutter/flutter.git
-FLUTTER=flutter/bin/flutter
+cd flutter
+git checkout $FLUTTER_BRANCH
+git pull origin $FLUTTER_BRANCH
+git checkout $FLUTTER_REVISION
+cd ..
 
-# Configure flutter
-FLUTTER_CHANNEL=master
-FLUTTER_VERSION=v2.5.3
-$FLUTTER channel $FLUTTER_CHANNEL
-$FLUTTER version $FLUTTER_VERSION
-
-# Build flutter for web
-$FLUTTER build web --release
-
-echo "OK"
+flutter/bin/flutter build web --release
