@@ -48,17 +48,23 @@ class _AuthViewState extends State<AuthView> {
                 children: [
                   AuthButton(
                       iconImage: "assets/google.png",
-                      onPress: () {},
+                      onPress: () {
+                        _controller.googleAuth();
+                      },
                       label: "Sign In With Google"),
                   SizedBox(height: 8.0),
                   AuthButton(
                       iconImage: "assets/facebook.png",
-                      onPress: () {},
+                      onPress: () {
+                        _controller.facebookAuth();
+                      },
                       label: "Sign In With Facebook"),
                   SizedBox(height: 8.0),
                   AuthButton(
                       iconImage: "assets/apple.png",
-                      onPress: () {},
+                      onPress: () {
+                        _controller.sigInAppleOnAndroid();
+                      },
                       label: "Sign In With Apple"),
                   SizedBox(height: 16.0),
                   RichText(
